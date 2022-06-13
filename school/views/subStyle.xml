@@ -1,0 +1,34 @@
+<odoo>
+    <data>
+        <record id="subject_details_form" model="ir.ui.view">
+            <field name="name">Subject Details</field>
+            <field name="model">school.subject</field>
+            <field name="arch" type="xml">
+                <tree string="subject Details" editable="bottom">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="subject_details_form" model="ir.ui.view">
+            <field name="name">Subject Details</field>
+            <field name="model">school.subject</field>
+            <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                </sheet>
+            </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_view_subject">
+            <field name="name">Student Profile</field>
+            <field name="res_model">school.subject</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="school_menu_subject" name="Subject" parent="school.school_menu_student" action="action_view_subject"/>
+    </data>
+</odoo>

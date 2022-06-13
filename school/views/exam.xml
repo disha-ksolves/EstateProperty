@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+    <record id="school_exam_tree" model="ir.ui.view">
+        <field name="name">Exams</field>
+        <field name="model">school.exam</field>
+        <field name="arch" type="xml">
+        <tree string="Exam Details" editable="bottom">
+            <field name="student_id"/>
+            <field name="subject_id"/>
+            <field name="student_mark"/>
+        </tree>
+        </field>
+    </record>
+    <record id="subject_exam_form" model="ir.ui.view">
+        <field name="name">Exam Details</field>
+        <field name="model">school.exam</field>
+        <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <field name="student_id"/>
+                        <field name="subject_id"/>
+                        <field name="student_mark"/>
+                    </h1>
+                </div>
+            </sheet>
+        </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_view_exam">
+        <field name="name">Exam Details</field>
+        <field name="res_model">school.exam</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="school_menu_exam" name="Exam" parent="school_menu_student" action="action_view_exam"/>
+    </data>
+</odoo>

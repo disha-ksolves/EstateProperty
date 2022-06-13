@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_school_student,access_school_student,model_school_student,,1,1,1,1
+access_school_level,access_school_level,model_school_level,,1,1,1,1
+access_school_subject,access_school_subject,model_school_subject,,1,1,1,1
+access_school_fees,access_school_fees,model_school_fees,,1,1,1,1
+access_school_exam,access_school_exam,model_school_exam,,1,1,1,1
+access_school_wizard,access_school_wizard,model_school_wizard,,1,1,1,1
+

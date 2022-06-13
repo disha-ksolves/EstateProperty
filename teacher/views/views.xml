@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="action_view_teacher">
+            <field name="name">Teacher detail</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain" eval="[('department_id', '=', ref('hr.dep_rd'))]"/>
+        </record>
+        <menuitem id="teacher_menu_subject" name="Teacher Detail" parent="school.school_menu_student" action="action_view_teacher"/>
+    </data>
+</odoo>

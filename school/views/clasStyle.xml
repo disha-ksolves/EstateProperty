@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <record id="subject_details_tree" model="ir.ui.view">
+            <field name="name">Class Details</field>
+            <field name="model">school.level</field>
+            <field name="arch" type="xml">
+            <tree string="Class Details" editable="bottom">
+                <field name="name"/>
+            </tree>
+
+            </field>
+        </record>
+        <record id="subject_details_tree" model="ir.ui.view">
+            <field name="name">Student Details</field>
+            <field name="model">school.level</field>
+            <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_view_level">
+            <field name="name">Class Details</field>
+            <field name="res_model">school.level</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="school_menu_level" name="Class" parent="school.school_menu_student" action="action_view_level"/>
+    </data>
+</odoo>

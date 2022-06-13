@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <record id="view_users_form" model="ir.ui.view">
+        <field name="name">hr.form.inherit.hr_employee</field>
+        <field name="model">hr_employee</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page name="teacher detail" string="Teacher Detail">
+                    <field name="Teacher_class_ids"/>
+                    <field name="Teacher_subject_ids"/>
+
+                </page>
+            </notebook>
+        </field>
+    </record>
+    <record id="view_users_tree" model="ir.ui.view">
+        <field name="name">hr.form.inherit.hr_employee</field>
+        <field name="model">hr_employee</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+                <tree string="Teacher Details">
+                <field name="Teacher_class_ids"/>
+                <field name="Teacher_subject_ids"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_view_hr">
+        <field name="name">hr.form.inherit.hr_employee</field>
+        <field name="model">hr_employee</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+        <menuitem id="hr_menu_teacher" name="Teacher" parent="school.school_menu_student" action="action_view_hr"/>
+    </data>
+</odoo>

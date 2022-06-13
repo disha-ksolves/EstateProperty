@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+<data>
+<record id="crm_rule_personal_lead" model="ir.rule">
+        <field name="name">Personal student record</field>
+        <field ref="model_school_student" name="model_id"/>
+        <field name="domain_force">[["create_uid","=",user.id]]</field>
+    </record>
+</data>
+</odoo>

@@ -1,0 +1,10 @@
+<odoo>
+    <record id="action_view_exam" model="ir.actions.report">
+       <field name="name">Exam Report1</field>
+       <field name="model">school.exam</field>
+       <field name="report_type">qweb-pdf</field>
+       <field name="report_name">school.report_student_exam</field>
+       <field name="report_file">school.report_student_exam</field>
+       <field name="binding_model_id" ref="model_school_exam"/>
+    </record>
+</odoo>
